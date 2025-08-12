@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Claim Your Valorant Skin — PRANK</title>
+  <style>
+    body {
+      margin:0; padding:0;
+      font-family: Arial, sans-serif;
+      background:#0a0a0a; /* near black */
+      color:#f2f2f2;
+      display:flex; justify-content:center; align-items:center;
+      min-height:100vh;
+    }
+    .container {
+      background:#141414; /* black with slight gray */
+      padding:20px;
+      border-radius:12px;
+      text-align:center;
+      width:90%; max-width:400px;
+      border:2px solid #ff4655; /* Valorant red accent */
+      box-shadow:0 0 20px rgba(255,70,85,0.4);
+    }
+    h1 {
+      margin-bottom:10px;
+      font-size:1.6em;
+      color:#ff4655;
+    }
+    .preview {
+      margin:15px 0;
+      cursor:pointer;
+      border-radius:8px;
+      overflow:hidden;
+      border:2px solid #ff4655;
+    }
+    .preview img {
+      width:100%;
+      display:block;
+    }
+    .btn {
+      padding:12px;
+      margin:8px 0;
+      border:none;
+      border-radius:8px;
+      font-size:1em;
+      cursor:pointer;
+      width:100%;
+      font-weight:bold;
+    }
+    .btn-claim {
+      background:#ff4655;
+      color:#fff;
+    }
+    .btn-info {
+      background:#1f1f1f;
+      color:#ff4655;
+      border:1px solid #ff4655;
+    }
+    .disclaimer {
+      font-size:0.8em;
+      color:#ffaaaa;
+      margin-top:10px;
+    }
+    .reveal {
+      display:none;
+      margin-top:15px;
+    }
+    .reveal img {
+      width:100%;
+      border-radius:8px;
+      border:2px solid #ff4655;
+    }
+    .reveal p {
+      margin-top:10px;
+      font-size:1.2em;
+      font-weight:bold;
+      color:#ff4655;
+    }
+    footer {
+      margin-top:12px;
+      font-size:0.75em;
+      color:#888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sentinels of Light Operator</h1>
+    <div class="preview">
+      <img src="Valorant-Sentinels-of-Light-Collection-Operator-HD.jpg" alt="Sentinels of Light Operator">
+    </div>
+    <button id="claimBtn" class="btn btn-claim">Claim Skin</button>
+    <button id="infoBtn" class="btn btn-info">Just Click Claim!</button>
+    <div class="disclaimer">
+      No Need to Sign in. Just click "Claim Skin".
+    </div>
+    <div id="reveal" class="reveal">
+      <img src="HIHI GIF 2.gif" alt="Dancing GIF">
+      <p>🔥 YOU GOT PRANKED BY TME DADDY!🔥</p>
+    </div>
+    <footer>All rights reserve 2099</footer>
+  </div>
+
+  <script>
+    document.getElementById('claimBtn').onclick = () => {
+      const btn = document.getElementById('claimBtn');
+      btn.textContent = 'Loading...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Processing...';
+      }, 1000);
+      setTimeout(() => {
+        btn.style.display = 'none';
+        document.querySelector('.preview').style.display = 'none';
+        document.getElementById('reveal').style.display = 'block';
+      }, 2500);
+    };
+
+    document.getElementById('infoBtn').onclick = () => {
+      alert('It’s just a prank page. No login, no password — just laughs.');
+    };
+  </script>
+</body>
+</html>
